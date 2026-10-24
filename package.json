@@ -1,0 +1,21 @@
+{
+  "name": "mini-t3",
+  "version": "0.1.0",
+  "description": "A small T3 Code-style chat UI that drives the Codex app-server over JSON-RPC.",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "desktop": "electron ."
+  },
+  "dependencies": {
+    "ws": "8.22.0"
+  },
+  "devDependencies": {
+    "electron": "44.9.3"
+  },
+  "main": "desktop/main.cjs"
+}

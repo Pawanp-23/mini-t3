@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="mini-t3-token" content="__MINI_T3_TOKEN__" />
+    <title>Mini T3</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">
+          <span class="logo" aria-hidden="true">T3</span>
+          <div>
+            <h1>Mini T3</h1>
+            <p class="workspace" id="workspace">Connecting…</p>
+          </div>
+        </div>
+        <div class="actions">
+          <div class="desktop-only" id="desktop-actions" hidden>
+            <button type="button" class="ghost" id="new-chat" title="New chat (Ctrl+N)">New chat</button>
+            <button type="button" class="ghost" id="open-folder" title="Open folder (Ctrl+O)">Open folder</button>
+          </div>
+          <div class="status" id="status" data-state="connecting">
+            <span class="dot" aria-hidden="true"></span>
+            <span id="status-text">Connecting</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="thread" id="thread" aria-live="polite">
+        <div class="empty" id="empty">
+          <h2>Ask Codex about your code</h2>
+          <p>Codex can read the workspace above but cannot change files.</p>
+        </div>
+      </main>
+
+      <form class="composer" id="composer">
+        <label class="sr-only" for="input">Message</label>
+        <textarea id="input" rows="1" placeholder="Message Codex" autocomplete="off"></textarea>
+        <button type="submit" id="send" disabled>Send</button>
+      </form>
+    </div>
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
